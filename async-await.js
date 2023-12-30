@@ -7,7 +7,7 @@ const makeTimeOut = (ms) => {
   return prom;
 };
 
-// Program order.
+// Program order. 1,2,3. 3 because it's paused until the promise comes back 
 
 console.log("Program Starting") // 1
 
