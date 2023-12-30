@@ -1,7 +1,7 @@
 const makeTimeOut = (ms) => {
   let prom = new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve(`All done! The time is: ${ms}!`);
+      resolve(`All done!`);
     }, ms);
   });
   return prom;
@@ -14,7 +14,9 @@ const fetchData = async () => {
   const result1 = await makeTimeOut(2000);
   console.log("Fetch second set of data...", result1);
   const result2 = await makeTimeOut(2000);
-  console.log("Done Fetching data...", result2);
+  const finalPromise = await Promise.all([result1 , result2])
+  console.log("Done Fetching data...", finalPromise);
+
 };
 
 fetchData();
