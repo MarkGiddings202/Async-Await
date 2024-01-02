@@ -37,7 +37,7 @@ const fetchSlow = () => {
 
 console.log("Program Started");
 
-let firstTimeStamp = new Date()
+let firstTimeStamp = new Date();
 
 const asyncFunction = async () => {
   let fast = await fetchFast();
@@ -45,17 +45,12 @@ const asyncFunction = async () => {
   let slow = await fetchSlow();
   console.log(slow);
 
-  let secondTimeStamp = new Date()
-  let timeLapse = secondTimeStamp - firstTimeStamp
-  console.log(timeLapse)
+  let secondTimeStamp = new Date();
+  let timeLapse = secondTimeStamp - firstTimeStamp;
+  console.log(timeLapse);
 };
 
-asyncFunction()
-// asyncFast();
-// asyncSlow();
+asyncFunction();
 
-// Promise.all([asyncFast(), asyncSlow()]).then((values) => {
-//   console.log(values);
-// });
 
 console.log("Program Complete");
