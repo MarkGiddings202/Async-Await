@@ -46,8 +46,8 @@ const asyncFunction = async () => {
   console.log(slow);
 
   let secondTimeStamp = new Date();
-  let timeLapse = secondTimeStamp - firstTimeStamp;
-  console.log(timeLapse);
+  let timeElapse = secondTimeStamp - firstTimeStamp;
+  console.log(timeElapse);
 };
 
 asyncFunction();
